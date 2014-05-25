@@ -245,6 +245,7 @@ class Bitcoin::Client
   alias block_by_count getblockbycount
   alias block_count getblockcount
   alias block_number getblocknumber
+  alias block_hash getblockhash
   alias connection_count getconnectioncount
   alias difficulty getdifficulty
   alias generate? getgenerate
