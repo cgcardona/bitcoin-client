@@ -94,6 +94,12 @@ class Bitcoin::Client
     @api.request 'gethashespersec'
   end
 
+  #Returns the estimated network hashes per second based on the last 120 blocks.
+  #Pass in [blocks] to override # of blocks, -1 specifies since last difficulty change.
+  def getnetworkhashespersec(blocks)
+    @api.request 'getnetworkhashespersec', blocks
+  end
+
   # Returns an object containing various state info.
   def getinfo
     @api.request 'getinfo'
@@ -250,6 +256,7 @@ class Bitcoin::Client
   alias difficulty getdifficulty
   alias generate? getgenerate
   alias hashes_per_sec gethashespersec
+  alias networkhashes_per_sec getnetworkhashespersec
   alias info getinfo
   alias new_address getnewaddress
   alias received_by_account getreceivedbyaccount
