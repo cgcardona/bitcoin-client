@@ -105,6 +105,11 @@ class Bitcoin::Client
     @api.request 'getinfo'
   end
 
+  # Returns data about each connected network node.
+  def getpeerinfo
+    @api.request 'getpeerinfo'
+  end
+
   # Returns an object containing mining info.
   def getmininginfo
     @api.request 'getmininginfo'
@@ -258,6 +263,7 @@ class Bitcoin::Client
   alias hashes_per_sec gethashespersec
   alias networkhash_ps getnetworkhashps
   alias info getinfo
+  alias peerinfo getpeerinfo
   alias new_address getnewaddress
   alias received_by_account getreceivedbyaccount
   alias received_by_address getreceivedbyaddress

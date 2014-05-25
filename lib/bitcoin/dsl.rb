@@ -135,6 +135,11 @@ module Bitcoin::DSL
     bitcoin.getinfo
   end
 
+  # Returns data about each connected network node.
+  def getpeerinfo
+    bitcoin.getpeerinfo
+  end
+
   # Returns an object containing various mining info.
   def getmininginfo
     bitcoin.getmininginfo
@@ -261,6 +266,7 @@ module Bitcoin::DSL
   alias hashes_per_sec gethashespersec
   alias networkhash_ps getnetworkhashps
   alias info getinfo
+  alias peerinfo getpeerinfo
   alias mininginfo getmininginfo
   alias new_address getnewaddress
   alias received_by_account getreceivedbyaccount
