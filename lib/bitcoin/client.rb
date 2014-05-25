@@ -66,11 +66,13 @@ class Bitcoin::Client
 
   # Returns the block number of the latest block in the longest block chain.
   def getblocknumber
+    puts 'getblocknumber'
     @api.request 'getblocknumber'
   end
 
   # Returns hash of block in best-block-chain at <index>; index 0 is the genesis block
   def getblockhash(index)
+    puts 'getblockhash'
     @api.request 'getblockhash', index
   end
 
