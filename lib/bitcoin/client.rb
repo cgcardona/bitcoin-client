@@ -69,6 +69,11 @@ class Bitcoin::Client
     @api.request 'getblocknumber'
   end
 
+  # Returns hash of block in best-block-chain at <index>; index 0 is the genesis block
+  def getblockhash(index)
+    @api.request 'getblockhash', index
+  end
+
   # Returns the number of connections to other nodes.
   def getconnectioncount
     @api.request 'getconnectioncount'
