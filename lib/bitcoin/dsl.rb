@@ -96,6 +96,7 @@ module Bitcoin::DSL
   
   # Returns the block number of the latest block in the longest block chain. 
   def getblocknumber
+    puts 'asdfasdfasdfasdfasfd'
     bitcoin.getblocknumber
   end
 
