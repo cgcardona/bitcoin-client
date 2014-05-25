@@ -126,8 +126,8 @@ module Bitcoin::DSL
   
   #Returns the estimated network hashes per second based on the last 120 blocks.
   #Pass in [blocks] to override # of blocks, -1 specifies since last difficulty change.
-  def getnetworkhashpersec(blocks)
-    bitcoin.getnetworkhashpersec, blocks
+  def getnetworkhashps(blocks)
+    bitcoin.getnetworkhashps, blocks
   end
 
   # Returns an object containing various state info. 
@@ -259,7 +259,7 @@ module Bitcoin::DSL
   alias difficulty getdifficulty
   alias generate? getgenerate
   alias hashes_per_sec gethashespersec
-  alias networkhash_per_sec getnetworkhashpersec
+  alias networkhash_ps getnetworkhashps
   alias info getinfo
   alias mininginfo getmininginfo
   alias new_address getnewaddress
