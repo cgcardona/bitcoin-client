@@ -186,8 +186,8 @@ class Bitcoin::Client
   end
 
   # +amount+ is a real and is rounded to 8 decimal places. Returns the transaction ID if successful.
-  def sendfrom(fromaccount, tobitcoinaddress, amount, minconf = 1, comment = nil, comment_to = nil)
-    @api.request 'sendfrom', fromaccount, tobitcoinaddress, amount, minconf, comment, comment_to
+  def sendfrom(fromaccount, tobitcoinaddress, amount, minconf = 1, comment = nil, comment_to = nil, blockchain_comment = nil)
+    @api.request 'sendfrom', fromaccount, tobitcoinaddress, amount, minconf, comment, comment_to, blockchain_comment
   end
 
   # +amount+ is a real and is rounded to 8 decimal places
